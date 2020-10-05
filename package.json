@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "portfortes",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.4.32",
     "gatsby-plugin-offline": "^3.2.29",
     "gatsby-plugin-react-helmet": "^3.3.12",
+    "gatsby-plugin-sass": "^2.3.14",
     "gatsby-plugin-sharp": "^2.6.37",
     "gatsby-remark-copy-linked-files": "^2.3.17",
     "gatsby-remark-images": "^3.3.31",
@@ -24,10 +25,13 @@
     "gatsby-source-filesystem": "^2.3.31",
     "gatsby-transformer-remark": "^2.8.36",
     "gatsby-transformer-sharp": "^2.5.16",
+    "node-sass": "^4.14.1",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-three-fiber": "^5.0.3",
+    "three": "^0.121.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
