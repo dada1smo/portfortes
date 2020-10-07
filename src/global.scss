@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   background-color: map-get($theme, primary-bg);
   font-size: 16px;
+  font-family: Archivo, Tahoma, Geneva, Verdana, sans-serif;
 
   .home {
     position: relative;
