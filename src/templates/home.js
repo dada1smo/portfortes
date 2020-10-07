@@ -1,6 +1,11 @@
 import React from "react"
-import Hero from "../components/hero"
+import Sky from "../components/sky"
 
 export default function Home({ children, location }) {
-  return <Hero />
+  return (
+    <div className="home">
+      <Sky />
+      <div>{children}</div>
+    </div>
+  )
 }

@@ -32,8 +32,10 @@
     "react-helmet": "^5.2.1",
     "react-three-fiber": "^5.0.3",
     "three": "^0.121.1",
+    "typeface-archivo": "^1.1.13",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "typeface-space-mono": "^1.1.13"
   },
   "devDependencies": {
     "prettier": "2.1.2"

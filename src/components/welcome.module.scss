@@ -1,0 +1,32 @@
+@import "../utilities";
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 20% auto 20%;
+
+  @include sm {
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 10% auto 10%;
+  }
+
+  .box {
+    background-color: map-get($theme, primary);
+    border: 2px dashed map-get($theme, primary-light);
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding: 2rem 3.5rem;
+
+    h1 {
+      color: #ffffff;
+
+      b {
+        color: map-get($theme, secondary);
+      }
+    }
+  }
+}

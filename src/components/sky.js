@@ -37,9 +37,9 @@ function Stars() {
   )
 }
 
-function Hero() {
+function Sky() {
   return (
-    <Canvas id="hero">
+    <Canvas id="sky" resize={{ scroll: false }}>
       <ambientLight color="#FDCA40" />
       <pointLight color="white" intensity={1} position={[10, 10, 10]} />
       <Stars />
@@ -47,4 +47,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Sky
