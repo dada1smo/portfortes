@@ -9,7 +9,7 @@ function Stars() {
   let theta = 0
   useFrame(state => {
     // Some things maybe shouldn't be declarative, we're in the render-loop here with full access to the instance
-    const r = 1 * Math.sin(THREE.Math.degToRad((theta += 0.1)))
+    const r = 0.5 * Math.sin(THREE.Math.degToRad((theta += 0.1)))
     const s = Math.cos(THREE.Math.degToRad(theta * 1.25))
     group.current.rotation.set(r, r, r)
     group.current.scale.set(s, s, s)
