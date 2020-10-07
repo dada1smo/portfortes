@@ -18,7 +18,7 @@ const Frame = styled("div")`
   fill: #fdca40;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-family: "Space Mono", monospaced;
+  font-family: "Space Mono", "Lucida Console", "Courier New", monospace;
 
   a {
     color: #ffffff;
