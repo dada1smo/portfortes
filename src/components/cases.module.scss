@@ -1,0 +1,75 @@
+@import "../utilities";
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". title title title ."
+    ". first second third .";
+  gap: 2rem;
+
+  @include sm {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    column-gap: 0;
+    grid-template-areas:
+      ". title ."
+      ". first ."
+      ". second .";
+  }
+
+  .title {
+    grid-area: title;
+    border-top: 2px solid map-get($theme, secondary);
+    padding-top: 2rem;
+
+    h1 {
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .first {
+    grid-area: first;
+  }
+
+  .second {
+    grid-area: second;
+  }
+
+  .third {
+    grid-area: third;
+  }
+
+  .box {
+    background-color: map-get($theme, primary);
+    border: 2px dashed map-get($theme, primary-light);
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+      border: 2px dashed map-get($theme, secondary);
+    }
+
+    h1 {
+      color: #ffffff;
+
+      b {
+        color: map-get($theme, secondary);
+      }
+    }
+
+    .links {
+      width: 100%;
+      padding: 0 3rem;
+    }
+  }
+}

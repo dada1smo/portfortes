@@ -19,10 +19,11 @@
     border: 2px dashed map-get($theme, primary-light);
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    align-self: center;
     padding: 3rem 3.5rem;
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
 
     h1 {
       color: #ffffff;
@@ -35,6 +36,10 @@
     .links {
       width: 100%;
       padding: 0 3rem;
+
+      @include sm {
+        padding: 0;
+      }
     }
   }
 }
