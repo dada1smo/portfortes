@@ -43,7 +43,7 @@
     grid-area: second;
 
     @include sm {
-      transition-delay: .3s;
+      transition-delay: .1s;
     }
   }
 
@@ -51,7 +51,7 @@
     grid-area: third;
 
     @include sm {
-      transition-delay: .3s;
+      transition-delay: .1s;
     }
   }
 

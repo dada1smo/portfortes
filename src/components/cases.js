@@ -9,7 +9,7 @@ const Cases = props => (
     <div
       className={casesStyles.title}
       data-sal="slide-right"
-      data-sal-delay="200"
+      data-sal-delay="100"
       data-sal-easing="ease"
     >
       <h1 data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
@@ -20,7 +20,7 @@ const Cases = props => (
     <div
       className={casesStyles.first}
       data-sal="slide-up"
-      data-sal-delay="300"
+      data-sal-delay="150"
       data-sal-easing="ease"
     >
       <Link to="#">
@@ -31,7 +31,7 @@ const Cases = props => (
     <div
       className={casesStyles.second}
       data-sal="slide-up"
-      data-sal-delay="350"
+      data-sal-delay="200"
       data-sal-easing="ease"
     >
       <Link to="#">

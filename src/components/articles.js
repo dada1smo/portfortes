@@ -7,10 +7,10 @@ import Arrow from "../../content/assets/arrow.svg"
 
 const Articles = props => {
   return (
-    <VisibilitySensor once>
+    <VisibilitySensor once partialVisibility>
       {({ isVisible }) => (
-        <Spring delay={100} to={{ width: isVisible ? "100%" : "50%" }}>
-          {({ width }) => (
+        <Spring delay={100} to={{ width: isVisible ? "100%" : "50%", opacity: isVisible ? 1 : 0 }}>
+          {({ width, opacity }) => (
             <section
               className={articleStyles.wrapper}
               id={props.sectionId}
@@ -18,9 +18,7 @@ const Articles = props => {
             >
               <div
                 className={articleStyles.container}
-                data-sal="fade"
-                data-sal-delay="400"
-                data-sal-easing="ease"
+                style={{ opacity }}
               >
                 <h1>Artigos</h1>
                 <div className={articleStyles.entry}>
