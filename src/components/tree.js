@@ -27,7 +27,7 @@ const Frame = styled("div")`
     text-decoration: underline;
 
     svg {
-      color: #cccccc;
+      color: #bbbbbb;
       margin-right: 0.5rem;
     }
   }

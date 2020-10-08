@@ -41,10 +41,18 @@
 
   .second {
     grid-area: second;
+
+    @include sm {
+      transition-delay: .3s;
+    }
   }
 
   .third {
     grid-area: third;
+
+    @include sm {
+      transition-delay: .3s;
+    }
   }
 
   .card {

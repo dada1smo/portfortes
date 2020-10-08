@@ -14,6 +14,19 @@
     grid-template-rows: 10% auto 10%;
   }
 
+  .monogram {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: center;
+    justify-self: center;
+
+    @include sm {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      padding-top: 2rem;
+    }
+  }
+
   .box {
     background-color: map-get($theme, primary);
     border: 2px dashed map-get($theme, primary-light);
@@ -24,6 +37,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include sm {
+      padding: 2rem;
+    }
 
     h1 {
       color: #ffffff;

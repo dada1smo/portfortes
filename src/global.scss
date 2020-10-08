@@ -28,5 +28,12 @@ body {
       left: 0;
       z-index: 0;
     }
+
+    #monogram {
+      transition: 0.3s;
+      &:hover {
+        fill: #ffffff;
+      }
+    }
   }
 }
