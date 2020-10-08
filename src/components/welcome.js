@@ -3,6 +3,8 @@ import welcomeStyles from "./welcome.module.scss"
 import TreeNav from "./tree"
 import Monogram from "../../content/assets/monogram.svg"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "../utils/fontawesome"
 
 const Welcome = () => (
   <section className={welcomeStyles.wrapper}>
@@ -20,6 +22,21 @@ const Welcome = () => (
       <div className={welcomeStyles.links}>
         <TreeNav />
       </div>
+    </div>
+    <div className={welcomeStyles.social}>
+      <a href="https://dribbble.com/dada1smo" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={["fab", "dribbble-square"]} />
+      </a>
+      <a href="https://github.com/dada1smo" target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={["fab", "github-square"]} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sampaio-afn/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FontAwesomeIcon icon={["fab", "linkedin"]} />
+      </a>
     </div>
   </section>
 )
