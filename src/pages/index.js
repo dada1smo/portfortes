@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Home from "../templates/home"
 import Welcome from "../components/welcome"
 import Cases from "../components/cases"
+import Articles from "../components/articles"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -14,7 +15,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Home>
       <Welcome />
-      <Cases />
+      <Cases sectionId="portfolio" />
+      <Articles sectionId="artigos" />
     </Home>
   )
 }

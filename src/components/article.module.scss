@@ -1,0 +1,30 @@
+@import "../utilities";
+
+.wrapper {
+  width: 100%;
+  background-color: map-get($theme, primary);
+  will-change: width, height, left, top;
+  position: relative;
+  margin: 8rem auto 0;
+  height: auto;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". title title title ."
+    ". first second third .";
+  gap: 2rem;
+
+  @include sm {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    column-gap: 0;
+    grid-template-areas:
+      ". title ."
+      ". first ."
+      ". second ."
+      ". third .";
+  }
+}

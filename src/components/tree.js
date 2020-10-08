@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-children-prop */
 import React, { memo, useState } from "react"
 import { useSpring, a, animated } from "react-spring"
 import { useMeasure, usePrevious } from "../utils/helpers"
@@ -22,6 +24,7 @@ const Frame = styled("div")`
 
   a {
     color: #ffffff;
+    text-decoration: underline;
 
     svg {
       color: #cccccc;
@@ -50,7 +53,7 @@ const toggle = {
   verticalAlign: "middle",
 }
 
-const Tree = memo(({ children, name, url, style, defaultOpen = false }) => {
+const Tree = memo(({ children, name, style, defaultOpen = false }) => {
   const [isOpen, setOpen] = useState(defaultOpen)
   const previous = usePrevious(isOpen)
   const [bind, { height: viewHeight }] = useMeasure()
@@ -70,9 +73,7 @@ const Tree = memo(({ children, name, url, style, defaultOpen = false }) => {
         style={{ ...toggle, opacity: children ? 1 : 0.3 }}
         onClick={() => setOpen(!isOpen)}
       />
-      <Title style={style}>
-        <Link to={url}>{name}</Link>
-      </Title>
+      <Title style={style}>{name}</Title>
       <Content
         style={{
           opacity,
@@ -88,12 +89,33 @@ const Tree = memo(({ children, name, url, style, defaultOpen = false }) => {
 const TreeNav = () => (
   <>
     <Tree name={<b>NAVEGAÇÃO</b>} defaultOpen>
-      <Tree name={<span><FontAwesomeIcon icon="eye" />portfólio</span>} url="/">
+      <Tree
+        name={
+          <Link to="#portfolio">
+            <FontAwesomeIcon icon="eye" />
+            portfólio
+          </Link>
+        }
+      >
         <Tree name="hello" />
         <Tree name="hello" />
       </Tree>
-      <Tree name={<span><FontAwesomeIcon icon="feather" />artigos</span>} url="/" />
-      <Tree name={<span><FontAwesomeIcon icon="star-of-life" />sobre</span>} url="/" />
+      <Tree
+        name={
+          <Link to="#">
+            <FontAwesomeIcon icon="feather" />
+            artigos
+          </Link>
+        }
+      />
+      <Tree
+        name={
+          <Link to="#">
+            <FontAwesomeIcon icon="star-of-life" />
+            sobre
+          </Link>
+        }
+      />
     </Tree>
   </>
 )

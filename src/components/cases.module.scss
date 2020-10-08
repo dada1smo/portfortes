@@ -20,7 +20,8 @@
     grid-template-areas:
       ". title ."
       ". first ."
-      ". second .";
+      ". second ."
+      ". third .";
   }
 
   .title {
@@ -46,30 +47,39 @@
     grid-area: third;
   }
 
-  .box {
+  .card {
     background-color: map-get($theme, primary);
     border: 2px dashed map-get($theme, primary-light);
-    padding: 3rem 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: 0.3s;
 
     &:hover {
-      border: 2px dashed map-get($theme, secondary);
+      border: 2px solid map-get($theme, secondary);
     }
 
-    h1 {
-      color: #ffffff;
+    .name {
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      b {
-        color: map-get($theme, secondary);
+      h2 {
+        color: #ffffff;
+        font-weight: 600;
+        margin-bottom: 0;
       }
     }
 
-    .links {
-      width: 100%;
-      padding: 0 3rem;
+    .tags {
+      padding: 0.25rem 2rem 1.5rem;
+      font-size: 1rem;
+      color: map-get($theme, secondary);
+      font-family: "Space Mono", "Lucida Console", "Courier New", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
     }
   }
 }

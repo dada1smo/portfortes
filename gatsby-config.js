@@ -19,6 +19,14 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
     {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+          threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
+          once: true,
+          disable: false,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -33,13 +41,24 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              options: {
+                maxWidth: 1920,
+                quality: 100,
+              },
             },
           },
           {
