@@ -8,6 +8,7 @@ import styled from "styled-components"
 import * as Icons from "../utils/icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "../utils/fontawesome"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Frame = styled("div")`
   position: relative;
@@ -22,9 +23,15 @@ const Frame = styled("div")`
   line-height: 1.5rem;
   font-family: "Space Mono", "Lucida Console", "Courier New", monospace;
 
-  a {
+  button {
     color: #ffffff;
     text-decoration: underline;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 
     svg {
       color: #bbbbbb;
@@ -91,10 +98,10 @@ const TreeNav = () => (
     <Tree name={<b>NAVEGAÇÃO</b>} defaultOpen>
       <Tree
         name={
-          <Link to="#portfolio">
+          <button onClick={() => scrollTo("#portfolio")}>
             <FontAwesomeIcon icon="eye" />
             portfólio
-          </Link>
+          </button>
         }
       >
         <Tree name="hello" />
@@ -102,18 +109,18 @@ const TreeNav = () => (
       </Tree>
       <Tree
         name={
-          <Link to="#">
+          <button onClick={() => scrollTo("#artigos")}>
             <FontAwesomeIcon icon="feather" />
             artigos
-          </Link>
+          </button>
         }
       />
       <Tree
         name={
-          <Link to="#">
+          <button onClick={() => scrollTo("#portfolio")}>
             <FontAwesomeIcon icon="star-of-life" />
             sobre
-          </Link>
+          </button>
         }
       />
     </Tree>

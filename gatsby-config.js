@@ -19,6 +19,9 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
     {
+      resolve: `gatsby-plugin-smoothscroll`,
+    },
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
           threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
