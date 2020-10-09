@@ -81,13 +81,18 @@
     }
 
     .tags {
-      padding: 0.25rem 2rem 1.5rem;
+      padding: 0 2rem 1.5rem;
       font-size: 1rem;
       color: map-get($theme, secondary);
       font-family: "Space Mono", "Lucida Console", "Courier New", monospace;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 400;
+
+      h4 {
+        color: map-get($theme, medium);
+        text-transform: none;
+      }
     }
   }
 }

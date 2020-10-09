@@ -46,6 +46,7 @@ const Card = props => (
       <Arrow />
     </div>
     <div className={casesStyles.tags}>
+      <h4>{props.sub}</h4>
       {props.tags}
     </div>
   </div>

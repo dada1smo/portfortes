@@ -20,22 +20,32 @@ const Cases = props => (
     <div
       className={casesStyles.first}
       data-sal="slide-up"
-      data-sal-delay="150"
+      data-sal-delay="200"
       data-sal-easing="ease"
     >
       <Link to="#">
-        <Card title="Amplia" imgSrc={"thumbnail.png"} tags="#Branding #UI" />
+        <Card
+          title="Apostil"
+          imgSrc={"apostil_thumbnail.png"}
+          sub="Sistema de Apostilamento"
+          tags="#Gráfico #UI/UX #Front-end"
+        />
       </Link>
     </div>
 
     <div
       className={casesStyles.second}
       data-sal="slide-up"
-      data-sal-delay="200"
+      data-sal-delay="150"
       data-sal-easing="ease"
     >
       <Link to="#">
-        <Card title="Amplia" imgSrc={"thumbnail.png"} tags="#Branding #UI" />
+        <Card
+          title="O plano fora do Plano"
+          imgSrc={"mobilidade_thumbnail.png"}
+          sub="Especial de jornalismo"
+          tags="#Gráfico #UI/UX #Front-end"
+        />
       </Link>
     </div>
 
@@ -46,7 +56,12 @@ const Cases = props => (
       data-sal-easing="ease"
     >
       <Link to="#">
-        <Card title="Amplia" imgSrc={"thumbnail.png"} tags="#Branding #UI" />
+        <Card
+          title="WebPKI"
+          imgSrc={"thumbnail.png"}
+          sub="Plugin de Certificação Digital"
+          tags="#UI/UX #Front-end"
+        />
       </Link>
     </div>
   </section>
