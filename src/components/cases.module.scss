@@ -43,7 +43,7 @@
     grid-area: second;
 
     @include sm {
-      transition-delay: .1s;
+      transition-delay: 0.1s;
     }
   }
 
@@ -51,7 +51,7 @@
     grid-area: third;
 
     @include sm {
-      transition-delay: .1s;
+      transition-delay: 0.1s;
     }
   }
 
@@ -61,6 +61,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
     transition: 0.3s;
 
     &:hover {
@@ -88,6 +90,10 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: auto;
 
       h4 {
         color: map-get($theme, medium);
